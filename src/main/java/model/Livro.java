@@ -32,4 +32,8 @@ public class Livro {
     public StatusLivro getStatusLivro() {
         return statusLivro;
     }
+
+    public void setStatusLivro(StatusLivro statusLivro) {
+        this.statusLivro = statusLivro;
+    }
 }

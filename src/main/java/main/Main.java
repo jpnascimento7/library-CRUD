@@ -9,9 +9,8 @@ public class Main {
         minhaB.adicionarLivro("Senhor dos anéis", "J.R.R Tolkien");
         minhaB.adicionarLivro("O pequeno principe", "Antonie de Saint");
 
-        Livro l = minhaB.buscarPorId(3);
-        System.out.println(l.getTitulo());
-
+        Livro l = minhaB.emprestarLivro(2);
+        minhaB.listarLivros();
     }
 
 }

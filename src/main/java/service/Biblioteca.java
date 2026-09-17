@@ -36,6 +36,18 @@ public class Biblioteca {
         }
         return livroEncontrado;
     }
+    public Livro emprestarLivro(int id){
+        Livro livro = buscarPorId(id);
+
+        if (livro == null){
+            System.out.println("Livro não encontrado");
+        }
+        if (livro.getStatusLivro() != Livro.StatusLivro.DISPONIVEL){
+            System.out.println("Livro não está disponível para empréstimo.");
+        }
+        livro.setStatusLivro(Livro.StatusLivro.EMPRESTADO);
+        return livro;
+    }
 
 }
 
