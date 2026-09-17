@@ -41,11 +41,28 @@ public class Biblioteca {
 
         if (livro == null){
             System.out.println("Livro não encontrado");
+            return null;
         }
         if (livro.getStatusLivro() != Livro.StatusLivro.DISPONIVEL){
             System.out.println("Livro não está disponível para empréstimo.");
+            return null;
         }
         livro.setStatusLivro(Livro.StatusLivro.EMPRESTADO);
+        return livro;
+    }
+    public Livro devolverLivro(int id){
+        Livro livro = buscarPorId(id);
+        if (livro == null){
+            System.out.printf("Livro não encontrado");
+            return null;
+        }
+        if (livro.getStatusLivro() != Livro.StatusLivro.EMPRESTADO){
+            System.out.println("Não é possível devolver pois ele não foi emprestado");
+            return null;
+        }
+        else {
+            livro.setStatusLivro(Livro.StatusLivro.DISPONIVEL);
+        }
         return livro;
     }
 

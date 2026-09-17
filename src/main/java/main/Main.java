@@ -11,6 +11,8 @@ public class Main {
 
         Livro l = minhaB.emprestarLivro(2);
         minhaB.listarLivros();
+        minhaB.devolverLivro(2);
+        minhaB.listarLivros();
     }
 
 }
