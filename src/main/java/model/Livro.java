@@ -17,6 +17,9 @@ public class Livro {
         this.id = id;
 
     }
+    public int getId() {
+        return id;
+    }
 
     public String getTitulo() {
         return titulo;
@@ -24,10 +27,6 @@ public class Livro {
 
     public String getAutor() {
         return autor;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public StatusLivro getStatusLivro() {
