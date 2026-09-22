@@ -30,6 +30,10 @@ public class ArquivoUtil {
             try (BufferedReader leitor = new BufferedReader(new FileReader(arquivo))) {
                 String linha;
                 while ((linha = leitor.readLine()) != null) {
+                    if (linha.isBlank()) {
+                        continue;
+                    }
+
                     String[] partes = linha.split(",");
 
                     int id = Integer.parseInt(partes[0]);
