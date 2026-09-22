@@ -44,17 +44,3 @@ O sistema permite cadastrar, listar, emprestar e devolver livros através de uma
 3. Execute a classe `Main.java`.
 4. Utilize o menu que será exibido em janelas (Swing) para interagir com o sistema.
 
-## 📁 Estrutura do projeto
-
-
-src/main/java
-├── model/       -> Classe Livro e enum StatusLivro
-├── service/     -> Regras de negócio (Biblioteca)
-├── util/        -> Persistência em arquivo (ArquivoUtil)
-├── exception/   -> Exceção customizada (LivroNaoEncontradoException)
-└── main/        -> Ponto de entrada da aplicação (Main)
-
-
-## 👤 Autor
-
-João Pedro
