@@ -1,10 +1,13 @@
 package service;
 
 import model.Livro;
+import util.ArquivoUtil;
+
 import java.util.ArrayList;
 
 public class Biblioteca {
-    final private ArrayList<Livro> livros = new ArrayList<Livro>();
+    final private ArrayList<Livro> livros = new ArquivoUtil().carregarLivros();
+    private ArquivoUtil arquivoUtil = new ArquivoUtil();
 
     public void adicionarLivro(String titulo, String autor){
         int novoId;
@@ -18,6 +21,7 @@ public class Biblioteca {
         }
         Livro novoLivro = new Livro(titulo, autor,Livro.StatusLivro.DISPONIVEL, novoId);
         livros.add(novoLivro);
+        arquivoUtil.salvarLivros(livros);
     }
     public void listarLivros() {
         for (Livro livro : livros) {
@@ -48,6 +52,7 @@ public class Biblioteca {
             return null;
         }
         livro.setStatusLivro(Livro.StatusLivro.EMPRESTADO);
+        arquivoUtil.salvarLivros(livros);
         return livro;
     }
     public Livro devolverLivro(int id){
@@ -62,9 +67,13 @@ public class Biblioteca {
         }
         else {
             livro.setStatusLivro(Livro.StatusLivro.DISPONIVEL);
+            arquivoUtil.salvarLivros(livros);
         }
         return livro;
     }
 
+    public ArrayList<Livro> getLivros() {
+        return livros;
+    }
 }
 
