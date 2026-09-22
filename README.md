@@ -46,14 +46,14 @@ O sistema permite cadastrar, listar, emprestar e devolver livros através de uma
 
 ## 📁 Estrutura do projeto
 
-```
+
 src/main/java
 ├── model/       -> Classe Livro e enum StatusLivro
 ├── service/     -> Regras de negócio (Biblioteca)
 ├── util/        -> Persistência em arquivo (ArquivoUtil)
 ├── exception/   -> Exceção customizada (LivroNaoEncontradoException)
 └── main/        -> Ponto de entrada da aplicação (Main)
-```
+
 
 ## 👤 Autor
 
